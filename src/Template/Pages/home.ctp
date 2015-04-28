@@ -59,7 +59,7 @@
     </p>
     <?= $this->Html->link(
         'View Project on Github',
-        ['https://github.com/gintonicweb/GintonicCMS'],
+        'http://github.com/gintonicweb/GintonicCMS',
         ['class'=>'btn btn-default btn-lg']
     );?>
 </div>

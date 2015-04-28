@@ -37,14 +37,10 @@
                     ]);?>
                 </li>
                 <li>
-                    <?php echo $this->Html->link( __('Api'), [
-                        'controller' => 'Pages', 'api'
-                    ]);?>
+                    <a href="#">Api</a>
                 </li>
                 <li>
-                    <?php echo $this->Html->link( __('Code Metrics'), [
-                        'controller' => 'Pages', 'metrics'
-                    ]);?>
+                    <a href="#">Code Metrics</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
