@@ -20,24 +20,33 @@
             </button>
         </div>
         <div class="collapse navbar-collapse" id="user-menu">
-            <?php if($this->request->session()->check('Auth.User')): ?>
             <ul class="nav navbar-nav">
                 <li>
-                    <?php echo $this->Html->link(
-                        __('Dashboard'),
-                        ['plugin'=>'GintonicCMS','controller' => 'Users', 'action' => 'profile'],
-                        ['escape' => false]
-                    );?>
+                    <?php echo $this->Html->link( __('Getting Started'), [
+                        'controller' => 'Pages', 'getting_started'
+                    ]);?>
                 </li>
                 <li>
-                    <?php echo $this->Html->link(
-                        __('Manage Files'),
-                        ['plugin'=>'GintonicCMS','controller' => 'files', 'action' => 'index'],
-                        ['escape' => false]
-                    ); ?>
+                    <?php echo $this->Html->link( __('Features'), [
+                        'controller' => 'Pages', 'features'
+                    ]);?>
+                </li>
+                <li>
+                    <?php echo $this->Html->link( __('Wrappers'), [
+                        'controller' => 'Pages', 'wrappers'
+                    ]);?>
+                </li>
+                <li>
+                    <?php echo $this->Html->link( __('Api'), [
+                        'controller' => 'Pages', 'api'
+                    ]);?>
+                </li>
+                <li>
+                    <?php echo $this->Html->link( __('Code Metrics'), [
+                        'controller' => 'Pages', 'metrics'
+                    ]);?>
                 </li>
             </ul>
-            <?php endif; ?>
             <ul class="nav navbar-nav navbar-right">
                 <?php if($this->request->session()->check('Auth.User')): ?>
                 <li class="dropdown">
