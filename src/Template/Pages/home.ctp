@@ -1,6 +1,9 @@
 <div class="jumbotron">
     <div class="container text-center">
-        <h1>GintonicCMS</h1>
+        <?= $this->Html->image('GintonicCMS.gintonic-white.png',[
+            'class' => 'img-responsive center-block title-logo',
+            'id' => 'title-logo'
+        ]); ?>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <p class="lead">
@@ -28,25 +31,16 @@
     </div>
     <div class="row">
         <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <h3>Putting the best tools to good use</h3>
-                </div>
-            </div>
+            <i class="fa fa-4x fa-wrench text-primary"></i>
+            <h3>The best tools</h3>
         </div>
         <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <h3>Solving the most common problems</h3>
-                </div>
-            </div>
+            <i class="fa fa-4x fa-rocket text-primary"></i>
+            <h3>Boilerplate</h3>
         </div>
         <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <h3>Providing a rich toolkit</h3>
-                </div>
-            </div>
+            <i class="fa fa-4x fa-cubes text-primary"></i>
+            <h3>Feature-rich</h3>
         </div>
     </div>
     <div class="row">
@@ -54,7 +48,7 @@
             <hr>
         </div>
     </div>
-    <p class="lead">
+    <p class="lead topic">
         GintonicCMS is open source. It's hosted, developped, and maintained on GitHub.
     </p>
     <?= $this->Html->link(

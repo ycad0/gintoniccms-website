@@ -19,7 +19,7 @@ class AppController extends Controller
     public $helpers = [
         'GintonicCMS.Require',
         'GintonicCMS.User',
-        'GintonicCMS.File',
+        'GintonicCMS.Media',
         'Form' => ['className' => 'GintonicCMS.Form'],
         'Paginator' => ['className' => 'GintonicCMS.Paginator'],
     ];
