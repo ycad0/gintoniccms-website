@@ -4,40 +4,31 @@
     Link:      http://gintonicweb.com
 */
 requirejs.config({
-    baseUrl: '/js/',
-    urlArgs: "bust=0",
+    baseUrl: '/',
+    /*urlArgs: "bust=0",*/
     paths: {
-        basepath:   baseUrl+'gintonic_c_m_s/js/require/basepath',
-        app:        baseUrl+ '/js/app',
+        // Paths
+        app: 'js/app',
+        lib: 'js/lib',
+        gintonic:   'gintonic_c_m_s/js',
+         
+        // Utilities
+        messages: 'gintonic_c_m_s/js/messages',
+        albums: 'gintonic_c_m_s/js/albums',
+        users: 'gintonic_c_m_s/js/users',
+        admin: 'gintonic_c_m_s/js/admin',
+        files: 'gintonic_c_m_s/js/files',
         
-        //lib 
-        lib: baseUrl+'/js/lib',
-        
-        //Messages
-        messages: baseUrl + 'gintonic_c_m_s/js/messages',
-        
-        //Photo Album
-        Albums: baseUrl + 'gintonic_c_m_s/js/Albums',
-        
-        //users
-        users: baseUrl+'gintonic_c_m_s/js/users',
-        
-        //Admin
-        admin: baseUrl+'gintonic_c_m_s/js/admin',
-        
-        //Files
-        files:  baseUrl+'gintonic_c_m_s/js/files',
-        
-        // wysiwyg
-        wysiwyg: baseUrl + 'gintonic_c_m_s/js/lib/bootstrap-wysiwyg',
+        // Gintonic Libs
+        wysiwyg: 'gintonic_c_m_s/js/lib/bootstrap-wysiwyg',
         
         // Libs
-        jquery:             '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min',
-        bootstrap:          '//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min',
-        jqueryvalidate:     '//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min',
-        slimscroll:         '//cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.3/jquery.slimscroll.min'
+        jquery: '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min',
+        bootstrap: '//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min',
+        jqueryvalidate: '//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min',
+        slimscroll: '//cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.3/jquery.slimscroll.min',
+        prettify: '//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify'
     },
-    
     shim: {
         slimscroll :  {
             deps: ["jquery"],
@@ -46,6 +37,5 @@ requirejs.config({
         bootstrap : ["jquery"],
         jqueryvalidate : ["jquery"],
         wysiwyg : ["jquery"],
-    },   
-    optimize: "none"    
+    }
 });

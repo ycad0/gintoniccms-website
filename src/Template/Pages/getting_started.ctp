@@ -1,3 +1,5 @@
+<?php $this->Require->req('prettify'); ?>
+
 <div class="container">
   <h1 >Getting Started</h1>
   <hr>
@@ -17,6 +19,11 @@
       
       <div class="col-md-9">
         <h2 id="sec0">Installation</h2>
+
+        <pre><code class="prettyprint">// some comments test
+$test = $this->method();
+$object = new Object(something);</code></pre>
+
         <p>
           At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
           find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
