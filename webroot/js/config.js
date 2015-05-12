@@ -1,11 +1,6 @@
-/*
-    Gintonic Web
-    Author:    Philippe Lafrance
-    Link:      http://gintonicweb.com
-*/
 requirejs.config({
     baseUrl: '/',
-    /*urlArgs: "bust=0",*/
+    urlArgs: "bust=0",
     paths: {
         // Paths
         app: 'js/app',
