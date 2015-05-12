@@ -32,7 +32,7 @@
     <div class="row">
         <div class="col-md-4">
             <i class="fa fa-4x fa-wrench text-primary"></i>
-            <h3>The best tools</h3>
+            <h3>Robustly Built</h3>
             <p>GintonicCMS uses <a href="http://cakephp.org/">CakePHP</a> as the back-end, <a href="http://getbootstrap.com/">Bootstrap</a> as the front-end, loads javascript using <a href="http://requirejs.org/">Require.js</a> and uses <a href="https://almsaeedstudio.com/AdminLTE">AdminLTE</a> as the admin panel.</p>
         </div>
         <div class="col-md-4">
@@ -42,7 +42,7 @@
         </div>
         <div class="col-md-4">
             <i class="fa fa-4x fa-cubes text-primary"></i>
-            <h3>Feature-rich</h3>
+            <h3>Feature-Rich</h3>
             <p>We have packaged and interfaced our favorites libraries and plugins, allowing you to include and use them through a uniform interface.</p>
         </div>
     </div>
