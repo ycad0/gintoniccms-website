@@ -33,14 +33,17 @@
         <div class="col-md-4">
             <i class="fa fa-4x fa-wrench text-primary"></i>
             <h3>The best tools</h3>
+            <p>GintonicCMS uses <a href="http://cakephp.org/">CakePHP</a> as the back-end, <a href="http://getbootstrap.com/">Bootstrap</a> as the front-end, loads javascript using <a href="http://requirejs.org/">Require.js</a> and uses <a href="https://almsaeedstudio.com/AdminLTE">AdminLTE</a> as the admin panel.</p>
         </div>
         <div class="col-md-4">
             <i class="fa fa-4x fa-rocket text-primary"></i>
             <h3>Boilerplate</h3>
+            <p>Start your apps quickly by extending our boilerplate code, letting you easily manage Users, Files/Pictures, Chat/Messaging and much more.</p>
         </div>
         <div class="col-md-4">
             <i class="fa fa-4x fa-cubes text-primary"></i>
             <h3>Feature-rich</h3>
+            <p>We have packaged and interfaced our favorites libraries and plugins, allowing you to include and use them through a uniform interface.</p>
         </div>
     </div>
     <div class="row">

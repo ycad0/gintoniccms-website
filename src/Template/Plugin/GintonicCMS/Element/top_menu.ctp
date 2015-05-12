@@ -27,78 +27,26 @@
                     ]);?>
                 </li>
                 <li>
-                    <?php echo $this->Html->link( __('Features'), [
-                        'controller' => 'Pages', 'features'
+                    <?php echo $this->Html->link( __('Core'), [
+                        'controller' => 'Pages', 'core'
                     ]);?>
                 </li>
                 <li>
-                    <?php echo $this->Html->link( __('Wrappers'), [
-                        'controller' => 'Pages', 'wrappers'
+                    <?php echo $this->Html->link( __('Toolkit'), [
+                        'controller' => 'Pages', 'toolkit'
                     ]);?>
-                </li>
-                <li>
-                    <a href="#">Api</a>
-                </li>
-                <li>
-                    <a href="#">Code Metrics</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <?php if($this->request->session()->check('Auth.User')): ?>
                 <li class="dropdown">
-                    <?php echo $this->Html->link(
-                        ($this->request->session()->read('Auth.User.first').' '.$this->request->session()->read('Auth.User.last')).'<span class="caret"></span>',
-                        '#',
-                        [
-                            'escape'=>false,
-                            'class'=>'dropdown-toggle',
-                            'data-toggle'=>'dropdown',
-                            'role'=>'button',
-                            'aria-expanded'=>false
-                        ]
-                    ); ?>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Development <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li>
-                            <?php if($this->request->session()->read('Auth.User.role') == 'admin'): ?>
-                                <?php echo $this->Html->link(
-                                    __('Administration'),
-                                    [
-                                        'plugin'=>'GintonicCMS',
-                                        'controller'=>'Users',
-                                        'action' => 'index',
-                                        'admin'
-                                    ],
-                                    ['escape' => false]
-                                );?>
-                            <?php endif; ?>
-                        </li>
-                        <li>
-                            <?php echo $this->Html->link(
-                                __('Profile'),
-                                [
-                                    'plugin'=>'GintonicCMS',
-                                    'controller'=>'Users',
-                                    'action'=>'edit',
-                                    $this->request->session()->read('Auth.User.id')
-                                ],
-                                ['escape'=>false]
-                            ); ?>
-                        </li>
-                        <?php echo $this->fetch('topMenuActions'); ?>
-                        <li>
-                            <?php echo $this->Html->link(
-                                __('Signout'),
-                                [
-                                    'plugin'=>'GintonicCMS',
-                                    'controller'=>'Users',
-                                    'action'=>'signout'
-                                ],
-                                ['escape'=>false]
-                            ); ?>
-                        </li>
+                        <li><a href="/api">Api</a></li>
+                        <li><a href="/pages/phpcs">Code Sniffer</a></li>
+                        <li><a href="https://travis-ci.org/gintonicweb/GintonicCMS/builds">Travis-CI</a></li>
+                        <li><a href="https://github.com/gintonicweb/GintonicCMS">GitHub</a></li>
                     </ul>
                 </li>
-                <?php endif; ?>
             </ul>
         </div>
     </div>
