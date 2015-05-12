@@ -22,7 +22,7 @@
 <div class="container text-center">
     <h2>Get Rid of Constraints</h2>
     <p class="lead">
-        Your organization is flexible, and so should be your code. Build flexible structures while keeping your code standardized and maintainable.
+        Your organization is flexible, and so should be your applications. Build flexible structures while keeping your code standardized and maintainable.
     </p>
     <div class="row">
         <div class="col-md-2 col-md-offset-5">
