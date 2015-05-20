@@ -12,7 +12,7 @@
             <?php echo $this->fetch('title') ?>
         </title>
 
-        <?php echo $this->Html->css('default') ?>
+        <?= $this->Html->css('default') ?>
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -29,16 +29,16 @@
 
         <footer class="footer">
           <div class="container">
-            <p class="text-muted">Powered by <a href="https://github.com/gintonicweb/GintonicCMS">GintonicCMS</a> from <a href="http://gintonicweb.com">Gintonic Web</a> </p>
+            <p class="text-muted">By <a href="http://phillafrance.com">Philippe Lafrance</a> at <a href="http://gintonicweb.com">Gintonic Web</a> </p>
           </div>
         </footer>
 
-        <?php echo $this->Require->req('jquery');?>
-        <?php echo $this->Require->req('bootstrap');?>
-        <?php echo $this->Require->req('app/affix');?>
-        <?php echo $this->Require->load($this->Url->build('/',TRUE).'js/config'); ?>
-
     </body>
+
+<?= $this->Require->req('jquery');?>
+<?= $this->Require->req('bootstrap');?>
+<?= $this->Require->req('app/affix');?>
+<?= $this->Require->load('config'); ?>
 </html>
 
 
