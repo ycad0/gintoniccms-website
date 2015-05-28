@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<div class="jumbotron first">
     <div class="container text-center">
         <?= $this->Html->image('GintonicCMS.gintonic-white.png',[
             'class' => 'img-responsive center-block title-logo',

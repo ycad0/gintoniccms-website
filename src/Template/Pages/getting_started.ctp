@@ -8,8 +8,8 @@
 <!--main-->
 <div class="container">
     <div class="row">
-      <div class="col-md-3" id="leftCol">
-        <ul class="nav nav-stacked" id="sidebar">
+      <div class="col-md-3" data-leftcol>
+        <ul class="nav nav-stacked sidebar" data-sidebar>
           <li><a href="#overview">Overview</a></li>
           <li><a href="#installation">Installation</a></li>
           <li><a href="#toolkit">Toolkit</a></li>
@@ -21,7 +21,7 @@
       </div>
       
       <div class="col-md-9">
-        <h2 id="overview">Overview</h2>
+        <h2 id="overview" class="section-first">Overview</h2>
         <hr>
         <p class="lead">
             GintonicCM is meant to provide a robust and extensible core for your 
@@ -32,72 +32,72 @@
         </p>
         <div class="row text-center">
             <div class="col-md-3">
-                <p class="lead"><span class="label label-default">Every device</span></p>
+                <p class="lead"><span class="label label-primary">Every device</span></p>
                 <p>Responsive, mobile first and meant to work on every type of device and browsers</p>
             </div>
             <div class="col-md-3">
-                <p class="lead"><span class="label label-default">Less Preprocessor</span></p>
+                <p class="lead"><span class="label label-primary">Less Preprocessor</span></p>
                 <p>Build powerful styles with the included Less preprocessor and build tools</p>
             </div>
             <div class="col-md-3">
-                <p class="lead"><span class="label label-default">No configuration</span></p>
+                <p class="lead"><span class="label label-primary">No configuration</span></p>
                 <p>Comes with an easy installer and a fully featured admin panel</p>
             </div>
             <div class="col-md-3">
-                <p class="lead"><span class="label label-default">Clean MVC conventions</span></p>
+                <p class="lead"><span class="label label-primary">Clean MVC conventions</span></p>
                 <p>Keep your code cleanly organized and maintainable both for back and front end</p>
             </div>
             <div class="col-md-3">
-                <p class="lead"><span class="label label-default">Secure</span></p>
+                <p class="lead"><span class="label label-primary">Secure</span></p>
                 <p>Built-in tools for validation, and protection against CSRF, XSS and SQL injection</p>
             </div>
             <div class="col-md-3">
-                <p class="lead"><span class="label label-default">Batteries Included</span></p>
+                <p class="lead"><span class="label label-primary">Batteries Included</span></p>
                 <p>Translations, database access, caching, validation, authentication and more</p>
             </div>
             <div class="col-md-3">
-                <p class="lead"><span class="label label-default">Clean Javascript</span></p>
+                <p class="lead"><span class="label label-primary">Clean Javascript</span></p>
                 <p>Using the AMD pattern and React/JSX templates to keep clean javascript code</p>
             </div>
             <div class="col-md-3">
-                <p class="lead"><span class="label label-default">Dynamic Interface</span></p>
+                <p class="lead"><span class="label label-primary">Dynamic Interface</span></p>
                 <p>Snappy interface with RequireJS asynch module loader and React websockets</p>
             </div>
             <div class="col-md-3">
-                <p class="lead"><span class="label label-default">SEO friendly</span></p>
+                <p class="lead"><span class="label label-primary">SEO friendly</span></p>
                 <p>We have followed the best practices to help you score high on search engines</p>
             </div>
             <div class="col-md-3">
-                <p class="lead"><span class="label label-default">Libraries management</span></p>
+                <p class="lead"><span class="label label-primary">Libraries management</span></p>
                 <p>Comes with Composer, NPM and bower to keep track and update dependencies</p>
             </div>
             <div class="col-md-3">
-                <p class="lead"><span class="label label-default">Build tools</span></p>
+                <p class="lead"><span class="label label-primary">Build tools</span></p>
                 <p>Comes with the tools and setup to compile less, optimize and minify javascript</p>
             </div>
             <div class="col-md-3">
-                <p class="lead"><span class="label label-default">Boilerplate App</span></p>
+                <p class="lead"><span class="label label-primary">Boilerplate App</span></p>
                 <p>Users, files, pictures, messaging  management and other features to build onto</p>
             </div>
             <div class="col-md-3">
-                <p class="lead"><span class="label label-default">Admin panel</span></p>
+                <p class="lead"><span class="label label-primary">Admin panel</span></p>
                 <p>A unified admin panel with a variety of built-in tools and plugins</p>
             </div>
             <div class="col-md-3">
-                <p class="lead"><span class="label label-default">Testable</span></p>
+                <p class="lead"><span class="label label-primary">Testable</span></p>
                 <p>Back-end testable using PHPUnit and front-end testable using Jest</p>
             </div>
             <div class="col-md-3">
-                <p class="lead"><span class="label label-default">Constant Integration</span></p>
+                <p class="lead"><span class="label label-primary">Constant Integration</span></p>
                 <p>Ready for constant integration like travis or jenkins</p>
             </div>
             <div class="col-md-3">
-                <p class="lead"><span class="label label-default">Many more tools<span></p>
+                <p class="lead"><span class="label label-primary">Many more tools<span></p>
                 <p>Helps you maintain doc, coding standards and constant integration</p>
             </div>
         </div>
 
-        <h2 id="installation">Installation</h2>
+        <h2 id="installation" class="section">Installation</h2>
         <hr>
         <h3>Requirements</h3>
         <p>Basicly, GintoniCMS has the same requirements as CakePHP</p>
@@ -136,7 +136,7 @@
         <pre>php composer.phar create-project --prefer-dist cakephp/app [app_name]</pre>
         <p>If you have composer installed globally:</p>
         <pre>composer create-project --prefer-dist cakephp/app [app_name]</pre>
-        <h2 id="toolkit">Toolkit</h2>
+        <h2 id="toolkit" class="section">Toolkit</h2>
         <hr>
         <div class="row">
             <div class="col-md-4">
@@ -196,7 +196,7 @@
                 <a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP_CodeSniffer</a>
             </div>
         </div>
-        <h2 id="appearance">Changing the appearance</h2>
+        <h2 id="appearance" class="section">Changing the appearance</h2>
         <hr>
         <h3>Default Views</h3>
         <p>Layouts</p>
@@ -206,17 +206,17 @@
         <p>Utilities</p>
         <h3>React Views</h3>
         <h3>Stylesheets</h3>
-        <h2 id="sec3">Assets mangement</h2>
+        <h2 id="sec3" class="section">Assets mangement</h2>
         <hr>
         <h3>RequireJS Component</h3>
         <h3>Overriding the core</h3>
         <h3>Building</h3>
         <h3>React Templates</h3>
-        <h2 id="sec4">Extending Features</h2>
+        <h2 id="sec4" class="section">Extending Features</h2>
         <hr>
         <p>Models</p>
         <p>Controllers</p>
-        <h2 id="sec5">Unit Testing</h2>
+        <h2 id="sec5" class="section">Unit Testing</h2>
         <hr>
       </div>
     </div>

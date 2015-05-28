@@ -119,25 +119,28 @@ img.site-logo{
 
 /* Affix left nav
 -------------------------------------------------- */
-.affix-top,.affix{
-    position: static;
+.section{
+    padding-top: 20px;
+}
+.section-first{
+    margin-top: -20px;
+    padding-top: 20px;
 }
 
 @media (min-width: 979px) {
-  #sidebar.affix-top {
+  .sidebar.affix-top {
     position: static;
-  	margin-top:30px;
   	width:228px;
   }
   
-  #sidebar.affix {
+  .sidebar.affix {
     position: fixed;
     top:70px;
     width:228px;
   }
 }
 
-#sidebar li.active {
+.sidebar li.active {
   border:0 #eee solid;
   border-right-width:5px;
 }
