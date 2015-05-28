@@ -33,12 +33,12 @@
           </div>
         </footer>
 
+        <?= $this->Require->req('jquery');?>
+        <?= $this->Require->req('bootstrap');?>
+        <?= $this->Require->req('app/affix');?>
+        <?= $this->Require->load('config'); ?>
     </body>
 
-<?= $this->Require->req('jquery');?>
-<?= $this->Require->req('bootstrap');?>
-<?= $this->Require->req('app/affix');?>
-<?= $this->Require->load('config'); ?>
 </html>
 
 
