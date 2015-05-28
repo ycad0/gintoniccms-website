@@ -13,10 +13,10 @@
           <li><a href="#overview">Overview</a></li>
           <li><a href="#installation">Installation</a></li>
           <li><a href="#toolkit">Toolkit</a></li>
-          <li><a href="#appearance">Changing the appearance</a></li>
-          <li><a href="#assets">Building Assets</a></li>
+          <li><a href="#views">Extending CakePHP Views</a></li>
+          <li><a href="#assets">Assets mangement</a></li>
+          <li><a href="#javasrcipt">Organizing javascript</a><li>
           <li><a href="#features">Extending Features</a></li>
-          <li><a href="#testing">Unit Testing</a></li>
         </ul>
       </div>
       
@@ -133,9 +133,13 @@
             <li><a href="http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm">nodejs and npm</a></li>
         </ul>
         <p>Then run the following command if you have composer installed locally</p>
-        <pre>php composer.phar create-project --prefer-dist cakephp/app [app_name]</pre>
+<pre class="prettyprint">
+php composer.phar create-project --prefer-dist cakephp/app [app_name]
+</pre>
         <p>If you have composer installed globally:</p>
-        <pre>composer create-project --prefer-dist cakephp/app [app_name]</pre>
+<pre class="prettyprint">
+composer create-project --prefer-dist cakephp/app [app_name]
+</pre>
         <h2 id="toolkit" class="section">Toolkit</h2>
         <hr>
         <div class="row">
@@ -196,7 +200,7 @@
                 <a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP_CodeSniffer</a>
             </div>
         </div>
-        <h2 id="appearance" class="section">Changing the appearance</h2>
+        <h2 id="views" class="section">Changing the appearance</h2>
         <hr>
         <h3>Default Views</h3>
         <p>Layouts</p>
@@ -206,18 +210,161 @@
         <p>Utilities</p>
         <h3>React Views</h3>
         <h3>Stylesheets</h3>
-        <h2 id="sec3" class="section">Assets mangement</h2>
+        <h2 id="assets" class="section">Assets mangement</h2>
         <hr>
-        <h3>RequireJS Component</h3>
-        <h3>Overriding the core</h3>
-        <h3>Building</h3>
-        <h3>React Templates</h3>
-        <h2 id="sec4" class="section">Extending Features</h2>
+        <p>
+            GintonicCMS uses a build system of it's own in order to manage the 
+            front-end dependencies. Here is basicly what the build system does:
+        </p>
+        <ol>
+            <li>npm Downlods build tools and dependencies to build</li>
+            <li>bower Downlods dependencies and libraries</li>
+            <li>grunt copies and orders the files in our folder structure</li>
+            <li>grunt optimizes and minimfies the javascript and outputs the result to the webroot</li>
+            <li>grunt compiles less and outputs the result to the webroot</li>
+            <li>grunt copies fonts to the webroot</li>
+        </ol>
+        <p>
+            In order to do that, we use the folder named <code>assets/</code>. The
+            root of that folder contains build tools and dependencies. The source
+            code of your project should be kept in the folder <code>assets/src/</code>.
+            Within each type of assets, you will find a folder called <code>lib/</code>
+            that holds all of the dependencies for that specific type of files.
+            this structure will be replicated in the webroot folder with the build.
+        </p>
+        <h3>How to build</h3>
+        <p>
+            If you used the default installer, you can simply use the admin 
+            panel buttons in order to rebuild assets.
+        </p>
+        <p>
+            If you prefer having a finer control over the build steps, you can
+            run the build from the command line. You will need bower and grunt
+            installed globally. If you don't have them, you can install them
+            with the following commands.
+        </p>
+<pre class="prettyprint">
+npm install -g bower
+npm install -g grunt-cli
+</pre>
+        <p> Then you can run all steps of the build like this: </p>
+<pre class="prettyprint">
+# install node package dependencies
+npm install
+
+# download assets and front end dependencies
+bower install
+
+# optimizes, minifies and copy sources files in webroot
+grunt
+</pre>
+        <p>
+            Most of the time, you will only use grunt to build your curent work
+            There are 2 different build modes, <strong>build</strong> and 
+            <strong>dev</strong>. The first one is longer and minifies all 
+            assets whereas the former runs quicker and doesn't minifies anything, 
+            making it easier to debug. You can also run the grunt build step
+            by step.
+        </p>
+        <div class="row">
+            <div class="col-md-6">
+<pre class="prettyprint">
+#run all build steps at once
+grunt
+
+#run each step one by one
+grunt copy:main
+grunt requirejs:build
+grunt less:build
+grunt copy:build
+</pre>
+            </div>
+            <div class="col-md-6">
+<pre class="prettyprint">
+#use dev mode for unminified files
+grunt dev
+
+#run eachstep one by one
+grunt copy:main
+grunt requirejs:dev
+grunt less:dev
+grunt copy:dev
+</pre>
+            </div>
+        </div>
+        <h3>Extending Less files</h3>
+        <p>
+            Less files are builded by taking into account the path of the plugin.
+            if a file is not present in the project folder, the compiler will
+            look in the plugin's directory. This makes it really easy to overide
+            single files, pick the ones you want to override from GintonicCMS,
+            put them in the matching folder of your app and voila.
+        </p>
+        <p>
+            By default the builder checks for the default path of the plugin.
+            <code>../vendor/gintonicweb/gintonic-cms/</code>. If you use the
+            plugin in cakephp's plugin folder, you'll have to define the path
+            of your plugin in <code>assets/Gruntfile.js</code>. You can also
+            define your plugin path at runtime like this:
+        </p>
+<pre class="prettyprint">
+grunt --gintonic="../plugins/GintonicCMS/"
+</pre>
+        <h3>Extending Javascript</h3>
+        <p>
+            In order to extend / override / include base javascript code in
+            your own modules, you will have to define your own paths in
+            <code>assets/src/js/config.js</code>. In this file you can choose
+            which folders and paths are loaded. If you have installed the plugin
+            via the regular installer, you'll have a copy of that file
+        </p>
+        <h2 id="javasrcipt" class="section">Organizing javascript</h2>
+        <h3>Asynchroneous Module Loader</h3>
+        <p>
+            All of our javascript is organized using the AMD design pattern. 
+            RequireJS is used to load those modules asynchroneously. Split
+            your files in different modules, and use our RequireHelper to load
+            the modules anywhere in your cake project.
+        </p>
+        <h3>React and Jsx Templates</h3>
+        <p>
+            React and JSX templates are also natively supported. In order to 
+            load .jsx templates, you will need to give the .jsx extention to
+            your files. From then, you can load them like any other module with 
+            requirejs, like this:
+        </p>
+<pre class="prettyprint">
+var myNiceModule = Require('jsx!app/myNiceModule');
+</pre>
+        <h3>RequireHelper</h3>
+        <p>
+            To facilitate cakephp's integration with RequireJS, GintonicCMS 
+            provides a helper to load RequireJS modules. Use it in your models
+            like this:
+        </p>
+<pre class="prettyprint">
+<?= htmlentities('<?= ') ?>$this->Require->req('jquery')<?= htmlentities(' ?>') ?>
+
+<?= htmlentities('<?= ') ?>$this->Require->req('bootstrap')<?= htmlentities(' ?>') ?>
+
+<?= htmlentities('<?= ') ?>$this->Require->load('config')<?= htmlentities(' ?>') ?>
+</pre>
+        <p>
+            This code will echo the following HTML:
+        </p>
+<pre class="prettyprint"><?= htmlentities(
+'<script src="/gintonic_c_m_s/js/config.js" data-main="/js/config"></script>
+<script type="text/javascript">
+    require(["js/config"], function () {
+        require(["jquery","bootstrap"]);
+    });
+</script>'
+)?>
+</pre>
+        <h2 id="features" class="section">Extending Features</h2>
         <hr>
         <p>Models</p>
         <p>Controllers</p>
-        <h2 id="sec5" class="section">Unit Testing</h2>
-        <hr>
       </div>
     </div>
 </div>
