@@ -81,15 +81,19 @@
             </div>
             <div class="col-md-3">
                 <p class="lead"><span class="label label-default">Admin panel</span></p>
+                <p>A unified admin panel with a variety of built-in tools and plugins</p>
             </div>
             <div class="col-md-3">
-                <p class="lead"><span class="label label-default">Unit testing</span></p>
+                <p class="lead"><span class="label label-default">Testable</span></p>
+                <p>Back-end testable using PHPUnit and front-end testable using Jest</p>
             </div>
             <div class="col-md-3">
-                <p class="lead"><span class="label label-default">...</span></p>
+                <p class="lead"><span class="label label-default">Constant Integration</span></p>
+                <p>Ready for constant integration like travis or jenkins</p>
             </div>
             <div class="col-md-3">
-                <p class="lead"><span class="label label-default">...</span></p>
+                <p class="lead"><span class="label label-default">Many more tools<span></p>
+                <p>Helps you maintain doc, coding standards and constant integration</p>
             </div>
         </div>
 
@@ -99,12 +103,19 @@
         <p>Basicly, GintoniCMS has the same requirements as CakePHP</p>
         <blockquote>
             <ul>
-                <li>HTTP Server. For example: Apache. Having mod_rewrite is preferred, but by no means required.</li>
+                <li>
+                    HTTP Server. For example: Apache. Having mod_rewrite is 
+                    preferred, but by no means required.
+                </li>
                 <li>PHP 5.4.16 or greater.</li>
                 <li>mbstring extension</li>
                 <li>intl extension</li>
             </ul>
-            <p>While a database engine isn’t required, we imagine that most applications will utilize one. CakePHP supports a variety of database storage engines</p>
+            <p>
+                While a database engine isn’t required, we imagine that most 
+                applications will utilize one. CakePHP supports a variety of 
+                database storage engines
+            </p>
             <ul>
                 <li>MySQL (5.1.10 or greater)</li>
                 <li>PostgreSQL</li>
@@ -113,29 +124,20 @@
             </ul>
         </blockquote>
         <h3>Installing GintonicCMS</h3>
+        <p>
+            GintonicCMS relies on composer and npm for it's installation. If 
+            you don't have them installed already, here are the install instructions.
+        </p>
         <ul>
-            <li>composer</li>
-            <li>nodejs and npm</li>
+            <li><a href="compose://getcomposer.org/doc/00-intro.md">composer</a></li>
+            <li><a href="http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm">nodejs and npm</a></li>
         </ul>
-        <h3>What happens</h3>
-        <h2 id="sec1">Toolkit</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <h3>GintonicCMS</h3>
-                <p>Built on top of CakePHP 3, GintonicCMS provides a robust and extensible core for your apps by wrapping powerful tools and a seamless base.</p>
-                <a href="http://cms.gintonicweb.com">http://cms.gintonicweb.com</a>
-            </div>
-            <div class="col-md-4">
-                <h3>CakePHP</h3>
-                <p>CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Front Controller and MVC</p>
-                <a href="http://cakephp.org">http://cakephp.org</a>
-            </div>
-            <div class="col-md-4">
-                <h3>Bootstrap</h3>
-                <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
-                <a href="http://getbootstrap.com">http://getbootstrap.com</a>
-            </div>
-        </div>
+        <p>Then run the following command if you have composer installed locally</p>
+        <pre>php composer.phar create-project --prefer-dist cakephp/app [app_name]</pre>
+        <p>If you have composer installed globally:</p>
+        <pre>composer create-project --prefer-dist cakephp/app [app_name]</pre>
+        <h2 id="toolkit">Toolkit</h2>
+        <hr>
         <div class="row">
             <div class="col-md-4">
                 <h3>GintonicCMS</h3>
@@ -170,7 +172,31 @@
                 <a href="http://socketo.me">http://socketo.me</a>
             </div>
         </div>
-        <h2 id="sec2">Changing the appearance</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h3>AdminLTE</h3>
+                <p>Admin control Panel Theme That Is Based On Bootstrap 3.x</p>
+                <a href="https://almsaeedstudio.com/">https://almsaeedstudio.com/</a>
+            </div>
+            <div class="col-md-4">
+                <h3>Build tools</h3>
+                <p>The following tools are wrapped together in an easily usable build system and dependency management.</p>
+                <a href="https://www.npmjs.com/">npm </a>, 
+                <a href="http://bower.io/">Bower </a>,
+                <a href="http://gruntjs.com/">Grunt</a>,
+                <a href="http://lesscss.org/">Less</a>,
+                <a href="http://requirejs.org/docs/optimization.html">r.js</a>
+            </div>
+            <div class="col-md-4">
+                <h3>Code integrity tools</h3>
+                <p>Here is a collection of tools that helps with codebase management</p>
+                <a href="https://phpunit.de/">PHPUnit</a>,
+                <a href="http://www.phpdoc.org/">phpDocumentor</a>,
+                <a href="https://facebook.github.io/jest/">Jest</a>,
+                <a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP_CodeSniffer</a>
+            </div>
+        </div>
+        <h2 id="appearance">Changing the appearance</h2>
         <hr>
         <h3>Default Views</h3>
         <p>Layouts</p>
