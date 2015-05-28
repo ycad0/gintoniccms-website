@@ -1,4 +1,4 @@
-<div class="jumbotron first">
+<div class="jumbotron">
     <div class="container text-center">
         <?= $this->Html->image('GintonicCMS.gintonic-white.png',[
             'class' => 'img-responsive center-block title-logo',
@@ -9,11 +9,7 @@
                 <p class="lead">
                     Built on top of CakePHP 3, GintonicCMS provides a robust and extensible core for your apps by wrapping the best apis and providing a flexible toolkit.
                 </p>
-                <?= $this->Html->link(
-                    'Download GintonicCMS', 
-                    ['controller' => 'Pages', 'getting_started'],
-                    ['class' => 'btn btn-primary btn-lg']
-                ); ?>
+                <a href="/pages/getting_started#installation" class="btn btn-primary btn-lg">Download GintonicCMS</a>
             </div>
         </div>
     </div>

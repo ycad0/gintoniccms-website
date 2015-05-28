@@ -24,7 +24,7 @@
         <h2 id="overview" class="section-first">Overview</h2>
         <hr>
         <p class="lead">
-            GintonicCM is meant to provide a robust and extensible core for your 
+            GintonicCMS is meant to provide a robust and extensible core for your 
             webapps, by wrapping powerful tools and a seamless base. We have
             designed this framework while keeping in mind that web applications 
             should be standardized and maintainable over time, in a context where
