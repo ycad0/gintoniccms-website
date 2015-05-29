@@ -1,7 +1,7 @@
 <?php $this->Require->req('prettify'); ?>
 
 <div class="container">
-  <h1 >Getting Started</h1>
+  <h1 >Getting Started test</h1>
   <hr>
 </div><!--/container-->
 
