@@ -1,0 +1,98 @@
+
+PHP CODE SNIFFER INFORMATION REPORT
+----------------------------------------------------------------------
+Adjacent assignments aligned: yes [271/364, 74.45%]
+	no => 93 (25.55%)
+
+Array end comma: no [1/1, 100%]
+
+Array keyword case: lower [25/25, 100%]
+
+Brackets around echoed strings: no [9/9, 100%]
+
+CamelCase class name: yes [41/41, 100%]
+
+CamelCase method name: yes [180/180, 100%]
+
+Class defined in namespace: yes [41/41, 100%]
+
+Class has doc comment: no [38/41, 92.68%]
+	yes => 3 (7.32%)
+
+Class opening brace placement: new line [41/41, 100%]
+
+Control structure defined inline: no [266/266, 100%]
+
+Declarations and side effects mixed: no [41/41, 100%]
+
+EOL char: \n [41/41, 100%]
+
+File extension for class files: .php [41/41, 100%]
+
+File has doc comment: no [41/41, 100%]
+
+Function has doc comment: yes [182/183, 99.45%]
+	no => 1 (0.55%)
+
+Function opening brace placement: same line [187/370, 50.54%]
+	new line => 183 (49.46%)
+
+Inline comment style: // ... [26/26, 100%]
+
+Line indent: spaces [3924/3924, 100%]
+
+Line length: 80 or less [4062/4245, 95.69%]
+	81-120 => 170 (4%)
+	121-150 => 8 (0.19%)
+	151 or more => 5 (0.12%)
+
+Lowercase filename: no [41/41, 100%]
+
+Multiple statements on same line: no [1199/1199, 100%]
+
+Newline at EOF: yes [41/41, 100%]
+
+Number of newlines at EOF: 1 [41/41, 100%]
+
+One class per file: yes [41/41, 100%]
+
+PHP closing tag at EOF: no [41/41, 100%]
+
+PHP closing tag at end of PHP-only file: no [41/41, 100%]
+
+PHP constant case: lower [191/191, 100%]
+
+PHP keyword case: lower [1324/1324, 100%]
+
+PHP short open tag used: no [41/41, 100%]
+
+Short array syntax used: yes [508/533, 95.31%]
+	no => 25 (4.69%)
+
+Space after operator: 1 [1310/1314, 99.7%]
+	0 => 4 (0.3%)
+
+Space before operator: 1 [62/62, 100%]
+
+Spaces after control structure open parenthesis: 0 [243/243, 100%]
+
+Spaces before control structure close parenthesis: 0 [243/243, 100%]
+
+Spacing after cast statement: 0 [4/4, 100%]
+
+Spacing after object operator: 0 [1673/1673, 100%]
+
+Spacing after string concat: 1 [93/95, 97.89%]
+	newline => 2 (2.11%)
+
+Spacing before object operator: 0 [1490/1673, 89.06%]
+	newline => 183 (10.94%)
+
+Spacing before string concat: 1 [94/95, 98.95%]
+	0 => 1 (1.05%)
+
+Use of ELSE IF or ELSEIF: elseif [4/4, 100%]
+
+----------------------------------------------------------------------
+Time: 5.13 secs; Memory: 19.25Mb
+

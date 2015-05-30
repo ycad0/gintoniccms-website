@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "hash": "6d3e041bfe2b0ffe2af7d88996af288f",
@@ -296,12 +296,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gintonicweb/GintonicCMS.git",
-                "reference": "fc7cc67b7d04ec3c85bfc9cc1abe48148bc0196a"
+                "reference": "9ca1e9dcf77d7c5c17105d1af4f2c63bdc7a7f01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gintonicweb/GintonicCMS/zipball/fc7cc67b7d04ec3c85bfc9cc1abe48148bc0196a",
-                "reference": "fc7cc67b7d04ec3c85bfc9cc1abe48148bc0196a",
+                "url": "https://api.github.com/repos/gintonicweb/GintonicCMS/zipball/9ca1e9dcf77d7c5c17105d1af4f2c63bdc7a7f01",
+                "reference": "9ca1e9dcf77d7c5c17105d1af4f2c63bdc7a7f01",
                 "shasum": ""
             },
             "require": {
@@ -340,7 +340,7 @@
                 "cakephp",
                 "requirejs"
             ],
-            "time": "2015-05-26 11:33:27"
+            "time": "2015-05-28 10:22:01"
         },
         {
             "name": "ircmaxell/password-compat",

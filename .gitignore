@@ -9,3 +9,6 @@
 /assets/src/css/lib/*
 /assets/src/less/lib/*
 /assets/src/fonts/lib/*
+/webroot/api/*
+.swp
+.orig

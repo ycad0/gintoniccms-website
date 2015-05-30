@@ -21,6 +21,12 @@
       </div>
       
       <div class="col-md-9">
+        <div class="alert alert-warning">
+            <p class="lead">
+                <strong>Warning:</strong> GintonicCMS is currently under development. Current status of the CMS
+                is not stable yet. Documentation, code and settings are subject to changes.
+            </p>
+        </div>
         <h2 id="overview" class="section-first">Overview</h2>
         <hr>
         <p class="lead">
@@ -146,7 +152,7 @@ composer create-project --prefer-dist cakephp/app [app_name]
             <div class="col-md-4">
                 <h3>GintonicCMS</h3>
                 <p>Built on top of CakePHP 3, GintonicCMS provides a robust and extensible core for your apps by wrapping powerful tools and a seamless base.</p>
-                <a href="http://cms.gintonicweb.com">http://cms.gintonicweb.com</a>
+                <a href="http://gintoniccms.com">http://gintoniccms.com</a>
             </div>
             <div class="col-md-4">
                 <h3>CakePHP</h3>

@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <p class="lead">
-                    Built on top of CakePHP 3, GintonicCMS provides a robust and extensible core for your apps by wrapping the best apis and providing a flexible toolkit.
+                    Built on top of CakePHP 3, GintonicCMS provides a robust and extensible core for your apps by wrapping powerful tools and a seamless base.
                 </p>
                 <a href="/pages/getting_started#installation" class="btn btn-primary btn-lg">Download GintonicCMS</a>
             </div>
@@ -29,7 +29,7 @@
         <div class="col-md-4">
             <i class="fa fa-4x fa-wrench text-primary"></i>
             <h3>Robustly Built</h3>
-            <p>GintonicCMS uses <a href="http://cakephp.org/">CakePHP</a> as the back-end, <a href="http://getbootstrap.com/">Bootstrap</a> as the front-end, loads javascript using <a href="http://requirejs.org/">Require.js</a> and uses <a href="https://almsaeedstudio.com/AdminLTE">AdminLTE</a> as the admin panel.</p>
+            <p>GintonicCMS uses <a href="http://cakephp.org/">CakePHP</a> as the back-end, <a href="http://getbootstrap.com/">Bootstrap</a> as the front-end, loads javascript using <a href="http://requirejs.org/">Require.js</a> with <a href="https://facebook.github.io/react/">React</a>, and uses <a href="https://almsaeedstudio.com/AdminLTE">AdminLTE</a> as the admin panel.</p>
         </div>
         <div class="col-md-4">
             <i class="fa fa-4x fa-rocket text-primary"></i>
