@@ -10,7 +10,7 @@
     <div class="row">
       <div class="col-md-3" data-leftcol>
         <ul class="nav nav-stacked sidebar" data-sidebar>
-          <li><a href="#overview">Overview stuff</a></li>
+          <li><a href="#overview">Overview</a></li>
           <li><a href="#installation">Installation</a></li>
           <li><a href="#toolkit">Toolkit</a></li>
           <li><a href="#views">Extending CakePHP Views</a></li>
