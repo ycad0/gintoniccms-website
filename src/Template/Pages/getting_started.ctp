@@ -34,12 +34,12 @@
             webapps, by wrapping powerful tools and a seamless base. We have
             designed this framework while keeping in mind that web applications 
             should be standardized and maintainable over time, in a context where
-            technologies and corporation needs evolve fast.
+            both technologies and your needs evolve fast.
         </p>
         <div class="row text-center">
             <div class="col-md-3">
                 <p class="lead"><span class="label label-primary">Every device</span></p>
-                <p>Responsive, mobile first and meant to work on every type of device and browsers</p>
+                <p>Responsive, mobile first and meant to work on every type of device and browser</p>
             </div>
             <div class="col-md-3">
                 <p class="lead"><span class="label label-primary">Less Preprocessor</span></p>
@@ -51,7 +51,7 @@
             </div>
             <div class="col-md-3">
                 <p class="lead"><span class="label label-primary">Clean MVC conventions</span></p>
-                <p>Keep your code cleanly organized and maintainable both for back and front end</p>
+                <p>Keep your code cleanly organized and maintainable for both back and front end</p>
             </div>
             <div class="col-md-3">
                 <p class="lead"><span class="label label-primary">Secure</span></p>
@@ -83,7 +83,7 @@
             </div>
             <div class="col-md-3">
                 <p class="lead"><span class="label label-primary">Boilerplate App</span></p>
-                <p>Users, files, pictures, messaging  management and other features to build onto</p>
+                <p>Users, files, pictures, messaging and other features to serve as a base</p>
             </div>
             <div class="col-md-3">
                 <p class="lead"><span class="label label-primary">Admin panel</span></p>
@@ -95,7 +95,7 @@
             </div>
             <div class="col-md-3">
                 <p class="lead"><span class="label label-primary">Constant Integration</span></p>
-                <p>Ready for constant integration like travis or jenkins</p>
+                <p>Ready for constant integration</p>
             </div>
             <div class="col-md-3">
                 <p class="lead"><span class="label label-primary">Many more tools<span></p>
@@ -132,7 +132,7 @@
         <h3>Installing GintonicCMS</h3>
         <p>
             GintonicCMS relies on composer and npm for it's installation. If 
-            you don't have them installed already, here are the install instructions.
+            you don't have them installed follow these instructions:
         </p>
         <ul>
             <li><a href="compose://getcomposer.org/doc/00-intro.md">composer</a></li>
@@ -220,7 +220,7 @@ composer create-project --prefer-dist cakephp/app [app_name]
         <hr>
         <p>
             GintonicCMS uses a build system of it's own in order to manage the 
-            front-end dependencies. Here is basicly what the build system does:
+            front-end dependencies. Here is how the build system works:
         </p>
         <ol>
             <li>npm Downlods build tools and dependencies to build</li>
@@ -244,10 +244,10 @@ composer create-project --prefer-dist cakephp/app [app_name]
             panel buttons in order to rebuild assets.
         </p>
         <p>
-            If you prefer having a finer control over the build steps, you can
-            run the build from the command line. You will need bower and grunt
+            If you want finer control over builds, you can
+            run it from the command line. You will need bower and grunt
             installed globally. If you don't have them, you can install them
-            with the following commands.
+            with:
         </p>
 <pre class="prettyprint">
 npm install -g bower
@@ -300,10 +300,11 @@ grunt copy:dev
         </div>
         <h3>Extending Less files</h3>
         <p>
-            Less files are builded by taking into account the path of the plugin.
-            if a file is not present in the project folder, the compiler will
-            look in the plugin's directory. This makes it really easy to overide
-            single files, pick the ones you want to override from GintonicCMS,
+            Less files are built using the project's assets folder as the 
+            main source and GintoniCMS's asset folder as a fallback.
+            If a file is not present in the project folder, the compiler will
+            look in the plugin's directory. This makes it easy to overide
+            single files. Pick the ones you want to override from GintonicCMS,
             put them in the matching folder of your app and voila.
         </p>
         <p>
@@ -344,9 +345,9 @@ var myNiceModule = Require('jsx!app/myNiceModule');
 </pre>
         <h3>RequireHelper</h3>
         <p>
-            To facilitate cakephp's integration with RequireJS, GintonicCMS 
-            provides a helper to load RequireJS modules. Use it in your models
-            like this:
+            To ease cakephp's integration with RequireJS, GintonicCMS 
+            provides a <a href="http://book.cakephp.org/3.0/en/views/helpers.html">helper</a> 
+            to load RequireJS modules. Use it in your models like this:
         </p>
 <pre class="prettyprint">
 <?= htmlentities('<?= ') ?>$this->Require->req('jquery')<?= htmlentities(' ?>') ?>
