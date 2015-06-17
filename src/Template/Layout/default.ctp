@@ -22,21 +22,22 @@
     </head>
     <body>
 
-        <?php echo $this->element('GintonicCMS.top_menu')?>
-        <?php echo $this->Flash->render(); ?>
+        <?= $this->element('GintonicCMS.top_menu') ?>
+        <?= $this->Flash->render() ?>
 
-        <?php echo $this->fetch('content'); ?>	                    
+        <?=  $this->fetch('content') ?>
 
         <footer class="footer">
           <div class="container">
             <p class="text-muted">By <a href="http://phillafrance.com">Philippe Lafrance</a> at <a href="http://gintonicweb.com">Gintonic Web</a> </p>
           </div>
         </footer>
-
         <?= $this->Require->req('jquery');?>
         <?= $this->Require->req('bootstrap');?>
         <?= $this->Require->req('app/affix');?>
         <?= $this->Require->load('config'); ?>
+
+        <?= $this->Element('analytics') ?>
     </body>
 
 </html>

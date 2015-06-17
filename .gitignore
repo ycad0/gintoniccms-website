@@ -10,6 +10,8 @@
 /assets/src/less/lib/*
 /assets/src/fonts/lib/*
 /webroot/api/*
+/webroot/metrics/*
+/src/Template/Element/analytics.ctp
 composer.lock
 .swp
 .orig
