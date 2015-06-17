@@ -11,7 +11,9 @@
         "cakephp/migrations": "~1.0",
         "cakephp/plugin-installer": "*",
         "cakephp/acl": "dev-master",
-        "gintonicweb/gintonic-cms": "dev-master"
+        "gintonicweb/gintonic-cms": "dev-master",
+        "cakephp/cakephp-codesniffer": "2.*",
+        "phpdocumentor/phpdocumentor": "2.*"
     },
     "require-dev": {
         "psy/psysh": "@stable",
