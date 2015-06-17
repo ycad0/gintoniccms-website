@@ -37,7 +37,9 @@
         <?= $this->Require->req('app/affix');?>
         <?= $this->Require->load('config'); ?>
 
-        <?= $this->Element('analytics') ?>
+        <?php if ($this->elementExists('analytics')) : ?>
+            <?= $this->Element('analytics') ?>
+        <?php endif; ?>
     </body>
 
 </html>
