@@ -41,7 +41,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Development <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="/api">Api</a></li>
+                        <li><a href="http://gintoniccms.com/api/namespaces/GintonicCMS.html">Api</a></li>
                         <li><a href="/pages/phpcs">Code Sniffer</a></li>
                         <li><a href="https://travis-ci.org/gintonicweb/GintonicCMS/builds">Travis-CI</a></li>
                         <li><a href="https://github.com/gintonicweb/GintonicCMS">GitHub</a></li>
