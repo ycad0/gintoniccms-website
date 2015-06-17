@@ -1,5 +1,5 @@
 
 config.js
 ----------------
-/var/www/html/doc/assets/bower_components/requirejs/require.js
+/var/www/doc/assets/bower_components/requirejs/require.js
 config.js

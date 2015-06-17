@@ -44,6 +44,7 @@ use Cake\Core\App;
 use Cake\Core\Configure;
 use Cake\Core\Configure\Engine\PhpConfig;
 use Cake\Core\Plugin;
+use Cake\Database\Type;
 use Cake\Datasource\ConnectionManager;
 use Cake\Error\ErrorHandler;
 use Cake\Log\Log;
@@ -64,6 +65,9 @@ use Cake\Utility\Security;
 try {
     Configure::config('default', new PhpConfig());
     Configure::load('app', 'default', false);
+    Configure::load('datasources');
+    Configure::load('email');
+    Configure::load('gintonic');
 } catch (\Exception $e) {
     die($e->getMessage() . "\n");
 }
@@ -180,12 +184,8 @@ Request::addDetector('tablet', function ($request) {
  */
 
 Plugin::load('Migrations');
+Plugin::load('Acl', ['bootstrap' => true]);
 Plugin::load('GintonicCMS', ['autoload' => true, 'routes' => true]);
-Configure::write('site_name','Gintonic');
-Configure::write('admin_mail', 'admin@gintonicweb.com');
-Configure::write('Cookie.key','f#$gf43G%4hg54htrHtrhtgFDFDGFSDgfd489');
-Configure::write('Cookie.name','gintonic');
-Configure::write('Cookies.loginDuration', '+2 weeks');
 
 // Only try to load DebugKit in development mode
 // Debug Kit should not be installed on a production system
@@ -199,3 +199,9 @@ if (Configure::read('debug')) {
 DispatcherFactory::add('Asset');
 DispatcherFactory::add('Routing');
 DispatcherFactory::add('ControllerFactory');
+
+/**
+ * Enable default locale format parsing.
+ * This is needed for matching the auto-localized string output of Time() class when parsing dates.
+ */
+Type::build('datetime')->useLocaleParser();

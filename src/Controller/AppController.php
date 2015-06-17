@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
-use GintonicCMS\Controller\AppController as BaseController;
+use GintonicCMS\Controller\AppController as GintonicAppController;
 
 /**
  * Application Controller
@@ -14,7 +14,7 @@ use GintonicCMS\Controller\AppController as BaseController;
  *
  * @link http://book.cakephp.org/3.0/en/controllers.html#the-app-controller
  */
-class AppController extends BaseController
+class AppController extends GintonicAppController
 {
 
     public $helpers = [

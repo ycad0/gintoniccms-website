@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6d3e041bfe2b0ffe2af7d88996af288f",
+    "hash": "993610a7afe6fd491742873dba2f854d",
     "packages": [
         {
             "name": "aura/installer-default",
@@ -124,6 +124,51 @@
                 "localization"
             ],
             "time": "2014-08-24 00:00:00"
+        },
+        {
+            "name": "cakephp/acl",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/acl.git",
+                "reference": "5e4ff1a24f780eeed0ef757076cfb2f17d39a6f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/acl/zipball/5e4ff1a24f780eeed0ef757076cfb2f17d39a6f3",
+                "reference": "5e4ff1a24f780eeed0ef757076cfb2f17d39a6f3",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "~3.0"
+            },
+            "require-dev": {
+                "cakephp/cakephp-codesniffer": "master-dev",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Acl\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/acl/graphs/contributors"
+                }
+            ],
+            "description": "Acl Plugin for CakePHP 3.x framework",
+            "homepage": "http://cakephp.org",
+            "keywords": [
+                "acl",
+                "cakephp"
+            ],
+            "time": "2015-06-04 15:49:36"
         },
         {
             "name": "cakephp/cakephp",
@@ -296,12 +341,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gintonicweb/GintonicCMS.git",
-                "reference": "b473b139645bdd01484e696038dff90bfd97176e"
+                "reference": "5ca50684823ce7ce5ed38d6a77dcc20ffe5e27d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gintonicweb/GintonicCMS/zipball/b473b139645bdd01484e696038dff90bfd97176e",
-                "reference": "b473b139645bdd01484e696038dff90bfd97176e",
+                "url": "https://api.github.com/repos/gintonicweb/GintonicCMS/zipball/5ca50684823ce7ce5ed38d6a77dcc20ffe5e27d1",
+                "reference": "5ca50684823ce7ce5ed38d6a77dcc20ffe5e27d1",
                 "shasum": ""
             },
             "require": {
@@ -340,7 +385,7 @@
                 "cakephp",
                 "requirejs"
             ],
-            "time": "2015-06-16 23:57:02"
+            "time": "2015-06-17 00:15:26"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -1137,6 +1182,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "cakephp/acl": 20,
         "gintonicweb/gintonic-cms": 20,
         "psy/psysh": 0
     },
