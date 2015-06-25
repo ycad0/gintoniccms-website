@@ -1,7 +1,7 @@
 <?php $this->Require->req('prettify'); ?>
 
 <div class="container">
-  <h1 >Getting Started test</h1>
+  <h1>Getting Started</h1>
   <hr>
 </div><!--/container-->
 
@@ -140,11 +140,11 @@
         </ul>
         <p>Then run the following command if you have composer installed locally</p>
 <pre class="prettyprint">
-php composer.phar create-project --prefer-dist cakephp/app [app_name]
+php composer.phar create-project --prefer-dist gintonicweb/app="dev-master" [app_name]
 </pre>
         <p>If you have composer installed globally:</p>
 <pre class="prettyprint">
-composer create-project --prefer-dist cakephp/app [app_name]
+composer create-project --prefer-dist gintonicweb/app="dev-master" [app_name]
 </pre>
         <h2 id="toolkit" class="section">Toolkit</h2>
         <hr>
