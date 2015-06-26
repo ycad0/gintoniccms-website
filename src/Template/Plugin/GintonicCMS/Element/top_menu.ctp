@@ -45,6 +45,7 @@
                         <li><a href="/pages/phpcs">Code Sniffer</a></li>
                         <li><a href="https://travis-ci.org/gintonicweb/GintonicCMS/builds">Travis-CI</a></li>
                         <li><a href="https://github.com/gintonicweb/GintonicCMS">GitHub</a></li>
+                        <li><a href="http://webchat.freenode.net?channels=%23gintonic&uio=d4">Chat</a></li>
                     </ul>
                 </li>
             </ul>
