@@ -1,140 +1,68 @@
 <div class="container">
-  <h1 >Wrappers</h1>
+  <h1>Toolkit</h1>
   <hr>
-</div><!--/container-->
+</div>
 
 <!--main-->
 <div class="container">
     <div class="row">
       <div class="col-md-3" id="leftCol">
         <ul class="nav nav-stacked" id="sidebar">
-          <li><a href="#sec0">Twitter Bootstrap</a></li>
-          <li><a href="#sec1">RequireJS</a></li>
-          <li><a href="#sec2">OAuth</a></li>
-          <li><a href="#sec3">Stripe</a></li>
+          <li><a href="#bootstrap">Twitter Bootstrap</a></li>
+          <li><a href="#less">Less</a></li>
+          <li><a href="#requirejs">RequireJS</a></li>
+          <li><a href="#build">Build Tools</a></li>
+          <li><a href="#react">React</a></li>
+          <li><a href="#ratchet">Ratchet</a></li>
+          <li><a href="#config">Config Tools</a></li>
         </ul>
       </div>
       
       <div class="col-md-9">
-        <h2 id="sec0">Twitter Bootstrap</h2>
-        <p>
-          At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-          find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-        </p>
-        <p>
-          Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-          eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-          sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-          Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-          eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-          sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut!
-        </p>
-        <p>
-          Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-          eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-          sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-          Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-          eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-          sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut!
-        </p>
-        
-        <h2 id="sec1">RequireJS</h2>
-        <p>
-          At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-          find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-        </p>
-        <p>
-          Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-          eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-          sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-          Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-          eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-          sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut!
-        </p>
-        <p>
-          Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-          eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-          sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-          Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-          eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-          sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut!
-        </p>
-        
-        <h2 id="sec2">OAuth</h2>
-        <p>
-          At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-          find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-        </p>
-        <p>
-          Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-          eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-          sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-          Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-          eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-          sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut!
-        </p>
-        <p>
-          Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-          eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-          sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-          Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-          eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-          sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut!
-        </p>
-        
-        <h2 id="sec3">Stripe</h2>
-        <p>
-          At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can 
-          find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-        </p>
-        <p>
-          Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-          eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-          sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-          Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-          eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-          sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut!
-        </p>
-        <p>
-          Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-          eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-          sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.              
-          Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-          eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-          sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut!
-        </p>
+
+          <h2 id="bootstrap">CakePHP</h2>
+          <hr>
+          <p>Acl</p>
+          <p>CRUD</p>
+
+          <h2 id="bootstrap">Twitter Bootstrap</h2>
+          <hr>
+          <p>Menus</p>
+          <p>Alerts</p>
+          <p>Pagination</p>
+
+          <h2 id="less">Less</h2>
+          <hr>
+          <p>Folder structure</p>
+          <p>Templates</p>
+          <p>build and uglify</p>
+          
+          <h2 id="requirejs">RequireJS</h2>
+          <hr>
+          <p>Including Requirejs</p>
+          <p>Adding dependencies</p>
+          <p>Loading via ajax</p>
+          <p>Require config file</p>
+          <p>Building with r.js</p>
+          
+          <h2 id="build">Build tools</h2>
+          <hr>
+          <p>Npm</p>
+          <p>Bower</p>
+          <p>Gtunt</p>
+
+          <h2 id="react">React</h2>
+          <hr>
+          <p>Json Views</p>
+
+          <h2 id="ratchet">Ratchet</h2>
+          <hr>
+          <p></p>
+
+          <h2 id="config">Config tools</h2>
+          <hr>
+          <p>Plugin Management</p>
+
       </div>
     </div>
 </div>
