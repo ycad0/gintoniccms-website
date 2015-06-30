@@ -208,14 +208,34 @@ composer create-project --prefer-dist gintonicweb/app="dev-master" [app_name]
         </div>
         <h2 id="views" class="section">Changing the appearance</h2>
         <hr>
-        <h3>Default Views</h3>
-        <p>Layouts</p>
-        <p>View Blocks</p>
-        <p>Overriding templates</p>
-        <p>Extending templates</p>
-        <p>Utilities</p>
-        <h3>React Views</h3>
-        <h3>Stylesheets</h3>
+        <h3>Overriding the plugin's default templates</h3>
+        <p>
+            GintonicCMS comes with default Templates files that you can override
+            it parts or in totality. The folder structure follows CakePHP 
+            conventions and each file follows Bootstrap structure.
+        </p>
+        <p>
+            The list of provided template files can be found in the plugins repository
+            on <a href="https://github.com/gintonicweb/app/tree/master/src/Template">GitHub</a>
+            or directly under: <br><code>vendor/gintonicweb/gintonic-cms/src/Templates</code>.
+        </p>
+        <p>
+            You can easily override the plugin's templates by creating files
+            with matching name and paths in your own project's folder under :
+            <br><code>src/Templates/Plugin/GintonicCMS</code>
+        </p>
+        <h3>Using your own templates and structure</h3>
+        <p>
+            On a default installation of GintonicCMS, the AppController defines 
+            the default layout to be <code>GintonicCMS.default</code> layout.
+            You can delete this line or edit it in order to load your own layout
+            like you would in a regular CakePHP project. 
+        </p>
+        <p>
+            Cakephp provides <a href="http://book.cakephp.org/3.0/en/views.html">
+            rich templating tools</a> including view blocks, layouts and helpers 
+            by adding them under <code>src/Templates</code>.
+        </p>
         <h2 id="assets" class="section">Assets mangement</h2>
         <hr>
         <p>
