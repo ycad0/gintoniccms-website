@@ -13,7 +13,7 @@
           <li><a href="#overview">Overview</a></li>
           <li><a href="#installation">Installation</a></li>
           <li><a href="#toolkit">Toolkit</a></li>
-          <li><a href="#views">Extending CakePHP Views</a></li>
+          <li><a href="#views">Changing the appearance</a></li>
           <li><a href="#assets">Assets mangement</a></li>
           <li><a href="#javasrcipt">Organizing javascript</a><li>
           <li><a href="#features">Extending Features</a></li>
@@ -226,15 +226,38 @@ composer create-project --prefer-dist gintonicweb/app="dev-master" [app_name]
         </p>
         <h3>Using your own templates and structure</h3>
         <p>
+            In some situations you might want to use your own templates and 
+            view elements instead of overriding GintonicCMS. You can use your
+            own templates by adding this line to your controllers:
+<pre class="prettyprint">
+$this->render('ControllerName/custom_file', 'layout_name');
+</pre>
+            Or even render some other plugins templates and permutations.
+<pre class="prettyprint">
+$this->render('PluginName.PluginController/custom_file', 'PluginName.layout_name');
+</pre>
+        </p>
+        <p>
             On a default installation of GintonicCMS, the AppController defines 
-            the default layout to be <code>GintonicCMS.default</code> layout.
-            You can delete this line or edit it in order to load your own layout
-            like you would in a regular CakePHP project. 
+            the default layout as <code>GintonicCMS.default</code>. You can 
+            delete this line or edit it in order to load your own layout like 
+            you would in a regular CakePHP project. 
+        </p>
+        <p>
+            Within template files, you can load your own custom elements 
+            by using <code></code> 
+<pre class="prettyprint">
+<?= htmlentities('<?= ') ?>$this->Element('element_name')<?= htmlentities(' ?>') ?>
+</pre>
+            or use the plugin notation
+<pre class="prettyprint">
+<?= htmlentities('<?= ') ?>$this->Element('PluginName.element_name')<?= htmlentities(' ?>') ?>
+</pre>
         </p>
         <p>
             Cakephp provides <a href="http://book.cakephp.org/3.0/en/views.html">
             rich templating tools</a> including view blocks, layouts and helpers 
-            by adding them under <code>src/Templates</code>.
+            that you can add to your project under <code>src/Templates</code>.
         </p>
         <h2 id="assets" class="section">Assets mangement</h2>
         <hr>
@@ -373,10 +396,33 @@ var myNiceModule = Require('jsx!app/myNiceModule');
 </script>'
 )?>
 </pre>
-        <h2 id="features" class="section">Extending Features</h2>
+        <h2 id="features" class="section">Extending The CMS</h2>
         <hr>
-        <p>Models</p>
-        <p>Controllers</p>
+        <p>
+            The CMS has been designed to be easily extended without having to
+            edit the core of the CMS. In this page we have explained how it
+            is possible to extend the basic appearance of cakephp. The same can
+            be done with Controllers, ORM and tools.
+        </p>
+        <p>
+            The default AppController <br>
+            <code>src/Controller/AppController.php</code>
+        </p>
+        <p>
+            of a default install of GintonicCMS extends the CMS own code <br>
+            <code>vendor/gintonicweb/gintonic-cms/src/Controller/AppController.php</code>
+        </p>
+        <p>
+            and is a good example of how GintonicCMS code can be overrided. 
+            The following sections of this website will describe how these 
+            functionalities are meant to be used. For detailed information,
+            The <a href="http://gintoniccms.com/api/namespaces/GintonicCMS.html">API</a>
+            section of this website details specificly GintonicCMS code.
+        </p>
+        <p>
+            If you are not familiar with CakePHP's use of plugins, it is recommended
+            to have a look at their <a href="http://book.cakephp.org/3.0/en/plugins.html">documentation on plugins</a>.
+        </p>
       </div>
     </div>
 </div>
