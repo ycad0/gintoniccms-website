@@ -220,16 +220,8 @@ composer create-project --prefer-dist gintonicweb/app="dev-master" [app_name]
         <hr>
         <p>
             GintonicCMS uses a build system of it's own in order to manage the 
-            front-end dependencies. Here is how the build system works:
+            front-end dependencies.
         </p>
-        <ol>
-            <li>npm Downlods build tools and dependencies to build</li>
-            <li>bower Downlods dependencies and libraries</li>
-            <li>grunt copies and orders the files in our folder structure</li>
-            <li>grunt optimizes and minimfies the javascript and outputs the result to the webroot</li>
-            <li>grunt compiles less and outputs the result to the webroot</li>
-            <li>grunt copies fonts to the webroot</li>
-        </ol>
         <p>
             In order to do that, we use the folder named <code>assets/</code>. The
             root of that folder contains build tools and dependencies. The source
@@ -255,6 +247,9 @@ npm install -g grunt-cli
 </pre>
         <p> Then you can run all steps of the build like this: </p>
 <pre class="prettyprint">
+# from your project folder, move into the assets folder
+cd assets
+
 # install node package dependencies
 npm install
 
@@ -307,16 +302,6 @@ grunt copy:dev
             single files. Pick the ones you want to override from GintonicCMS,
             put them in the matching folder of your app and voila.
         </p>
-        <p>
-            By default the builder checks for the default path of the plugin.
-            <code>../vendor/gintonicweb/gintonic-cms/</code>. If you use the
-            plugin in cakephp's plugin folder, you'll have to define the path
-            of your plugin in <code>assets/Gruntfile.js</code>. You can also
-            define your plugin path at runtime like this:
-        </p>
-<pre class="prettyprint">
-grunt --gintonic="../plugins/GintonicCMS/"
-</pre>
         <h3>Extending Javascript</h3>
         <p>
             In order to extend / override / include base javascript code in
