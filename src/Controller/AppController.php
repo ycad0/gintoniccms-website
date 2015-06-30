@@ -16,15 +16,6 @@ use GintonicCMS\Controller\AppController as GintonicAppController;
  */
 class AppController extends GintonicAppController
 {
-
-    public $helpers = [
-        'GintonicCMS.Require',
-        'GintonicCMS.User',
-        'GintonicCMS.Media',
-        'Form' => ['className' => 'GintonicCMS.Form'],
-        'Paginator' => ['className' => 'GintonicCMS.Paginator'],
-    ];
-
     /**
      * Initialization hook method.
      *
