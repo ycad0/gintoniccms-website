@@ -35,7 +35,7 @@
         <?= $this->Require->req('jquery');?>
         <?= $this->Require->req('bootstrap');?>
         <?= $this->Require->req('app/affix');?>
-        <?= $this->Require->load('config'); ?>
+        <?= $this->Require->load('main'); ?>
 
         <?php if ($this->elementExists('analytics')) : ?>
             <?= $this->Element('analytics') ?>
