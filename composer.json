@@ -10,7 +10,6 @@
         "mobiledetect/mobiledetectlib": "2.*",
         "cakephp/migrations": "~1.0",
         "cakephp/plugin-installer": "*",
-        "cakephp/acl": "dev-master",
         "gintonicweb/gintonic-cms": "dev-master",
         "cakephp/cakephp-codesniffer": "2.*"
     },
@@ -36,7 +35,12 @@
     },
     "scripts": {
         "post-install-cmd": "App\\Console\\Installer::postInstall",
-        "post-autoload-dump": "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump"
+        "post-autoload-dump": [
+            "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump",
+            "npm install",
+            "bower install --allow-root",
+            "grunt"
+        ]
     },
     "minimum-stability": "dev",
     "prefer-stable": true
