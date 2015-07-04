@@ -17,6 +17,7 @@
           <li><a href="#assets">Assets mangement</a></li>
           <li><a href="#javasrcipt">Organizing javascript</a><li>
           <li><a href="#features">Extending Features</a></li>
+          <li><a href="#contributing">Contributing to GintonicCMS</a></li>
         </ul>
       </div>
       
@@ -107,37 +108,47 @@
         <hr>
         <h3>Requirements</h3>
         <p>Basicly, GintoniCMS has the same requirements as CakePHP</p>
-        <blockquote>
-            <ul>
-                <li>
-                    HTTP Server. For example: Apache. Having mod_rewrite is 
-                    preferred, but by no means required.
-                </li>
-                <li>PHP 5.4.16 or greater.</li>
-                <li>mbstring extension</li>
-                <li>intl extension</li>
-            </ul>
-            <p>
-                While a database engine isn’t required, we imagine that most 
-                applications will utilize one. CakePHP supports a variety of 
-                database storage engines
-            </p>
-            <ul>
-                <li>MySQL (5.1.10 or greater)</li>
-                <li>PostgreSQL</li>
-                <li>Microsoft SQL Server (2008 or higher)</li>
-                <li>SQLite 3</li>
-            </ul>
-        </blockquote>
-        <h3>Installing GintonicCMS</h3>
+        <ul>
+            <li>
+                HTTP Server. For example: Apache. Having mod_rewrite is 
+                preferred, but by no means required.
+            </li>
+            <li>PHP 5.4.16 or greater.</li>
+            <li>mbstring extension</li>
+            <li>intl extension</li>
+        </ul>
         <p>
-            GintonicCMS relies on composer and npm for it's installation. If 
-            you don't have them installed follow these instructions:
+            While a database engine isn’t required, we imagine that most 
+            applications will utilize one. CakePHP supports a variety of 
+            database storage engines
         </p>
         <ul>
-            <li><a href="compose://getcomposer.org/doc/00-intro.md">composer</a></li>
-            <li><a href="http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm">nodejs and npm</a></li>
+            <li>MySQL (5.1.10 or greater)</li>
+            <li>PostgreSQL</li>
+            <li>Microsoft SQL Server (2008 or higher)</li>
+            <li>SQLite 3</li>
         </ul>
+        <p>
+            The build system provided by GintonicCMS relies on the following
+            front-end tools. It is strongly suggested to install the 3 of them
+            globally to benefit from the full power of our build system.
+        </p>
+        <ul>
+            <li><a href="http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm">npm</a></li>
+            <li><a href="http://bower.io/">bower</a></li>
+            <li><a href="http://gruntjs.com/getting-started">grunt-cli</a></li>
+        </ul>
+        <h3>Installing GintonicCMS</h3>
+        <p>
+            GintonicCMS relies on composer and you need to <strong>run it from a shell
+            where git is installed</strong>. If you don't have them installed follow these 
+            instructions:
+        </p>
+        <ul>
+            <li><a href="https://getcomposer.org/doc/00-intro.md">composer</a></li>
+            <li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">git</a></li>
+        </ul>
+        <p></p>
         <p>Then run the following command if you have composer installed locally</p>
 <pre class="prettyprint">
 php composer.phar create-project --prefer-dist gintonicweb/app="dev-master" [app_name]
@@ -422,6 +433,37 @@ var myNiceModule = Require('jsx!app/myNiceModule');
         <p>
             If you are not familiar with CakePHP's use of plugins, it is recommended
             to have a look at their <a href="http://book.cakephp.org/3.0/en/plugins.html">documentation on plugins</a>.
+        </p>
+
+        <h2 id="contributing" class="section">Contributing to GintonicCMS</h2>
+        <hr>
+        <p>
+            To contribute to GintonicCMS, the first thing you might want to do is
+            to setup your development environment. Here's how:
+        </p>
+        <ul>
+            <li>Setup a GintonicCMS project using the installation instructions.</li>
+            <li>Clone the GintonicCMS on github</li>
+            <li>Open a shell and get into the folder <code>[your_app]/vendor/gintonicweb/gintonic-cms/</code></li>
+            <li>Add a remote to  your own fork <code>git remote add my_new_remote http://...</code></li>
+            <li>Make your changes in the vendor folder and push them to your remote <code>git push my_new_remote master</code></li>
+            <li>Check that the <a href="https://travis-ci.org/gintonicweb/GintonicCMS">build on travis</a> is fine</li>
+            <li>From Github, make a pull request on the main project.</li>
+            <li>Keep commits small and clear</li>
+        </ul>
+        <p>
+            You can also contribute to our satellite projects like the documentation you're 
+            reading right now. 
+            <ul>
+                <li>Fork and clone <a href="https://github.com/gintonicweb/gintoniccms-website.git">the docs repo</a></li>
+                <li>run <code>composer install</code> to deploy the project locally</li>
+                <li>open the <code>config</code> folder and setup your <code>app.php</code>, <code>datasources.php</code> and <code>email.php</code></li>
+            </ul>
+        </p>
+        <p>
+            You can have a look at the different packages on 
+            <a href="https://github.com/gintonicweb">our page on giour page on githubthub</a>.
+            we are also <a href="http://webchat.freenode.net/?channels=%23gintonic&uio=d4">available on irc</a>.
         </p>
       </div>
     </div>
