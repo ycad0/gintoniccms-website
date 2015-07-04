@@ -16,6 +16,9 @@
         </div>
 
         <div class="col-md-9">
+            <h2 id="users">Theming</h2>
+            <hr>
+            <p>Bake themes</p>
             <h2 id="users">Users</h2>
             <hr>
             <p>Authentitcation</p>
