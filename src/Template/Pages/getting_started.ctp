@@ -284,26 +284,13 @@ $this->render('PluginName.PluginController/custom_file', 'PluginName.layout_name
             that holds all of the dependencies for that specific type of files.
             this structure will be replicated in the webroot folder with the build.
         </p>
-        <h3>How to build</h3>
+        <h3>Building the assets</h3>
         <p>
             If you used the default installer, you can simply use the admin 
             panel buttons in order to rebuild assets.
         </p>
-        <p>
-            If you want finer control over builds, you can
-            run it from the command line. You will need bower and grunt
-            installed globally. If you don't have them, you can install them
-            with:
-        </p>
-<pre class="prettyprint">
-npm install -g bower
-npm install -g grunt-cli
-</pre>
         <p> Then you can run all steps of the build like this: </p>
 <pre class="prettyprint">
-# from your project folder, move into the assets folder
-cd assets
-
 # install node package dependencies
 npm install
 
@@ -313,40 +300,6 @@ bower install
 # optimizes, minifies and copy sources files in webroot
 grunt
 </pre>
-        <p>
-            Most of the time, you will only use grunt to build your curent work
-            There are 2 different build modes, <strong>build</strong> and 
-            <strong>dev</strong>. The first one is longer and minifies all 
-            assets whereas the former runs quicker and doesn't minifies anything, 
-            making it easier to debug. You can also run the grunt build step
-            by step.
-        </p>
-        <div class="row">
-            <div class="col-md-6">
-<pre class="prettyprint">
-#run all build steps at once
-grunt
-
-#run each step one by one
-grunt copy:main
-grunt requirejs:build
-grunt less:build
-grunt copy:build
-</pre>
-            </div>
-            <div class="col-md-6">
-<pre class="prettyprint">
-#use dev mode for unminified files
-grunt dev
-
-#run eachstep one by one
-grunt copy:main
-grunt requirejs:dev
-grunt less:dev
-grunt copy:dev
-</pre>
-            </div>
-        </div>
         <h3>Extending Less files</h3>
         <p>
             Less files are built using the project's assets folder as the 
