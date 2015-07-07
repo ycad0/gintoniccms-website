@@ -1,11 +1,8 @@
-<?php $this->Require->req('prettify'); ?>
-
 <div class="container">
-  <h1>Getting Started</h1>
-  <hr>
+    <h1>Getting Started</h1>
+    <hr>
 </div><!--/container-->
 
-<!--main-->
 <div class="container">
     <div class="row">
       <div class="col-md-3" data-leftcol>
@@ -346,13 +343,13 @@ var myNiceModule = Require('jsx!app/myNiceModule');
 
 <?= htmlentities('<?= ') ?>$this->Require->req('bootstrap')<?= htmlentities(' ?>') ?>
 
-<?= htmlentities('<?= ') ?>$this->Require->load('config')<?= htmlentities(' ?>') ?>
+<?= htmlentities('<?= ') ?>$this->Require->load()<?= htmlentities(' ?>') ?>
 </pre>
         <p>
             This code will echo the following HTML:
         </p>
 <pre class="prettyprint"><?= htmlentities(
-'<script src="/gintonic_c_m_s/js/config.js" data-main="/js/config"></script>
+'<script src="/js/main.js" data-main="/js/main"></script>
 <script type="text/javascript">
     require(["js/config"], function () {
         require(["jquery","bootstrap"]);

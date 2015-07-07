@@ -40,6 +40,7 @@
         <?= $this->Require->req('jquery');?>
         <?= $this->Require->req('bootstrap');?>
         <?= $this->Require->req('app/affix');?>
+        <?= $this->Require->req('prettify');?>
         <?= $this->Require->load(); ?>
     </body>
 </html>
