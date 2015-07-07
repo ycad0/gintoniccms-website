@@ -16,5 +16,17 @@ use GintonicCMS\Controller\AppController as GintonicAppController;
  */
 class AppController extends GintonicAppController
 {
-    public $layout = "GintonicCMS.default";
+    /**
+     * Initialization hook method.
+     *
+     * Use this method to add common initialization code like loading components.
+     *
+     * @return void
+     */
+    public function initialize()
+    {
+        parent::initialize();
+        $this->layout = 'default';
+    }
+    
 }
