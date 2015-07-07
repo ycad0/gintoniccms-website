@@ -10,7 +10,7 @@
           <li><a href="#overview">Overview</a></li>
           <li><a href="#installation">Installation</a></li>
           <li><a href="#toolkit">Toolkit</a></li>
-          <li><a href="#views">Changing the appearance</a></li>
+          <li><a href="#theming">Theming</a></li>
           <li><a href="#assets">Assets mangement</a></li>
           <li><a href="#javasrcipt">Organizing javascript</a><li>
           <li><a href="#features">Extending Features</a></li>
@@ -132,8 +132,8 @@
         </p>
         <ul>
             <li><a href="http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm">npm</a></li>
-            <li><a href="http://bower.io/">bower</a></li>
-            <li><a href="http://gruntjs.com/getting-started">grunt-cli</a></li>
+            <li><a href="http://bower.io/">bower</a> (<code>npm install -g bower</code>)</li>
+            <li><a href="http://gruntjs.com/getting-started">grunt-cli</a> (<code>npm install -g grunt-cli</code>)</li>
         </ul>
         <h3>Installing GintonicCMS</h3>
         <p>
@@ -214,25 +214,88 @@ composer create-project --prefer-dist gintonicweb/app="dev-master" [app_name]
                 <a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP_CodeSniffer</a>
             </div>
         </div>
-        <h2 id="views" class="section">Changing the appearance</h2>
+        <h2 id="theming" class="section">Theming</h2>
         <hr>
-        <h3>Overriding the plugin's default templates</h3>
+        <h3>Loading and Building themes</h3>
         <p>
-            GintonicCMS comes with default Templates files that you can override
-            it parts or in totality. The folder structure follows CakePHP 
-            conventions and each file follows Bootstrap structure.
+            GintonicCMS comes pre-packaged with 2 themes. TwbsTheme
+            is the default plain bootstrap front-end. AdminTheme is
+            based on AdminLTE and is used as the default Admin theme. Refer to them
+            as 2 working examples. Here's how you can replace the default themes 
+            with other GintonicCMS themes.
+        </p>
+        <p>1. Install a new theme with composer</p>
+<pre class="prettyprint">
+composer require gintonicweb/twbs-theme
+</pre>
+
+        <p>2. Add it to your <code>config/bootstrap.php</code> file</p>
+<pre class="prettyprint">
+Plugin::load('TwbsTheme');
+</pre>
+        <p>3. Add it to the front-end dependencies with bower</p>
+<pre class="prettyprint">
+bower install gintonicweb/twbs-theme --save-dev
+</pre>
+        <p>4. Add it to your  <code>Gruntfile.js</code> file</p>
+<pre class="prettyprint">
+// requirejs > compile > options > paths :
+twbsTheme: '../../vendor/gintonicweb/twbs-theme/assets/js/main'
+
+// requirejs > compile > options > modules > includes :
+"twbsTheme"
+</pre>
+        <h3>Working with themes</h3>
+        <p>
+            Each CakePHP plugin uses the same standard folder structure.
+            GintonicCMS defines some <a href="https://github.com/gintonicweb/GintonicCMS/tree/master/src/Template">base templates</a>.
+            You can override them in your own application by creating 
+            the folder <code>src/Template/Plugin/GintonicCMS</code>
+            and crating templates with the matching paths and names.
         </p>
         <p>
-            The list of provided template files can be found in the plugins repository
-            on <a href="https://github.com/gintonicweb/app/tree/master/src/Template">GitHub</a>
-            or directly under: <br><code>vendor/gintonicweb/gintonic-cms/src/Templates</code>.
+            For example, you could override GintonicCMS
+            <a href="https://github.com/gintonicweb/GintonicCMS/blob/master/src/Template/Element/Menus/top_menu.ctp">default top menu</a>
+            by creating the file
+            <code>src/Template/Plugin/GintonicCMS/Element/Menus/top_menu.ctp</code>
+            in your project folder.
         </p>
         <p>
-            You can easily override the plugin's templates by creating files
-            with matching name and paths in your own project's folder under :
-            <br><code>src/Templates/Plugin/GintonicCMS</code>
+            Themes can override the project's templates if marked 
+            as such in your controllers.
         </p>
-        <h3>Using your own templates and structure</h3>
+<pre class="prettyprint">
+class ExamplesController extends AppController
+{
+public $theme = 'TwbsTheme';
+}
+</pre>
+        <p>
+            Given this scenario, cake would look for templates in 
+            the following order and render the first file available.<br>
+            <ol>
+                <li>
+                    The theme <br>
+                    <code>vendor/gintonicweb/twbs-theme/src/Template/Examples/index.ctp</code> 
+                </li>
+                <li> 
+                    The application <br>
+                    <code>src/Template/Plugin/GintonicCMS/Examples/index.ctp</code>
+                </li>
+                <li>
+                     The plugin where ExamplesController.php is defined<br>
+                    <code>vendor/gintonicweb/gintonic-cms/src/Template/Examples/index.ctp</code>
+                </li>
+            </ol>
+        </p>
+        <h3>Loading the template of your choice</h3>
+        <p>
+            In the case above, given templates with matching paths and 
+            names, the ones of <code>TwbsTheme</code> have precedence over
+            the ones of your application. This comes in handy when the 
+            semantics of your templates are significantly altered between 
+            themes.
+        </p>
         <p>
             In some situations you might want to use your own templates and 
             view elements instead of overriding GintonicCMS. You can use your
@@ -267,6 +330,21 @@ $this->render('PluginName.PluginController/custom_file', 'PluginName.layout_name
             rich templating tools</a> including view blocks, layouts and helpers 
             that you can add to your project under <code>src/Templates</code>.
         </p>
+
+        <h3>Baking templates from themes</h3>
+        <p>
+            <a href="http://book.cakephp.org/3.0/en/bake/usage.html">Baking templates</a> 
+            can make your life easier, and since we're using themes, 
+            the baked templates should be themed too. By using the 
+            following commands, you can bake themed files with a nice
+            and matching style.
+        </p>
+<pre class="prettyprint">
+bin/cake bake template posts --theme TwbsTheme
+</pre>
+<pre class="prettyprint">
+bin/cake bake template posts --theme AdminTheme --prefix Admin
+</pre>
         <h2 id="assets" class="section">Assets mangement</h2>
         <hr>
         <p>
