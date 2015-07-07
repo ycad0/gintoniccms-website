@@ -186,6 +186,9 @@ Request::addDetector('tablet', function ($request) {
 Plugin::load('Migrations');
 Plugin::load('Acl', ['bootstrap' => true]);
 Plugin::load('GintonicCMS', ['autoload' => true, 'routes' => true]);
+Plugin::load('AdminTheme');
+Plugin::load('TwbsTheme');
+Plugin::load('Crud');
 
 // Only try to load DebugKit in development mode
 // Debug Kit should not be installed on a production system
