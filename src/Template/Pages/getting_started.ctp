@@ -254,11 +254,18 @@ twbsTheme: '../../vendor/gintonicweb/twbs-theme/assets/js/main'
             and crating templates with the matching paths and names.
         </p>
         <p>
-            For example, you could override GintonicCMS
-            <a href="https://github.com/gintonicweb/GintonicCMS/blob/master/src/Template/Element/Menus/top_menu.ctp">default top menu</a>
-            by creating the file
-            <code>src/Template/Plugin/GintonicCMS/Element/Menus/top_menu.ctp</code>
-            in your project folder.
+            The files will be loaded in the following order and the first
+            file available will be rendered
+            <ol>
+                <li>
+                    Your app<br>
+                    <code>src/Template/Plugin/GintonicCMS/Element/Menus/top_menu.ctp</code> 
+                </li>
+                <li> 
+                    <a href="https://github.com/gintonicweb/GintonicCMS/blob/master/src/Template/Element/Menus/top_menu.ctp">The CMS default top menu</a><br>
+                    <code>vendor/gintonicweb/gintonic-cms/src/Template/Element/Menus/top_menu.ctp</code>
+                </li>
+            </ol>
         </p>
         <p>
             Themes can override the project's templates if marked 
@@ -280,11 +287,7 @@ public $theme = 'TwbsTheme';
                 </li>
                 <li> 
                     The application <br>
-                    <code>src/Template/Plugin/GintonicCMS/Examples/index.ctp</code>
-                </li>
-                <li>
-                     The plugin where ExamplesController.php is defined<br>
-                    <code>vendor/gintonicweb/gintonic-cms/src/Template/Examples/index.ctp</code>
+                    <code>src/Template/Examples/index.ctp</code>
                 </li>
             </ol>
         </p>
