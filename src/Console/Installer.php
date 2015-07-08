@@ -14,6 +14,7 @@
  */
 namespace App\Console;
 
+use Cake\Filesystem\Folder;
 use Composer\Script\Event;
 use Exception;
 
@@ -38,19 +39,20 @@ class Installer
         $rootDir = dirname(dirname(__DIR__));
 
         static::createAppConfig($rootDir, $io);
+        static::createWritableDirectories($rootDir, $io);
 
         // ask if the permissions should be changed
         if ($io->isInteractive()) {
-            $validator = (function ($arg) {
+            $validator = function ($arg) {
                 if (in_array($arg, ['Y', 'y', 'N', 'n'])) {
                     return $arg;
                 }
                 throw new Exception('This is not a valid answer. Please choose Y or n.');
-            });
+            };
             $setFolderPermissions = $io->askAndValidate(
                 '<info>Set Folder Permissions ? (Default to Y)</info> [<comment>Y,n</comment>]? ',
                 $validator,
-                false,
+                10,
                 'Y'
             );
 
@@ -66,6 +68,7 @@ class Installer
         if (class_exists('\Cake\Codeception\Console\Installer')) {
             \Cake\Codeception\Console\Installer::customizeCodeceptionBinary($event);
         }
+        $io->write('Install successful');
     }
 
     /**
@@ -77,11 +80,49 @@ class Installer
      */
     public static function createAppConfig($dir, $io)
     {
-        $appConfig = $dir . '/config/app.php';
-        $defaultConfig = $dir . '/config/app.default.php';
-        if (!file_exists($appConfig)) {
-            copy($defaultConfig, $appConfig);
-            $io->write('Created `config/app.php` file');
+        $files = [
+            '/config/app.php' => '/config/app.default.php',
+            '/config/email.php' => '/config/email.default.php',
+            '/config/datasources.php' => '/config/datasources.default.php',
+            '/config/gintonic.php' => '/config/gintonic.default.php',
+        ];
+        foreach ($files as $local => $default) {
+            if (!file_exists($dir . $local)) {
+                copy($dir . $default, $dir . $local);
+                $io->write('Created `' . $local . '` file');
+            }
+        }
+    }
+
+    /**
+     * Create the `logs` and `tmp` directories.
+     *
+     * @param string $dir The application's root directory.
+     * @param \Composer\IO\IOInterface $io IO interface to write to console.
+     * @return void
+     */
+    public static function createWritableDirectories($dir, $io)
+    {
+        $paths = [
+            'config',
+            'assets',
+            'logs',
+            'tmp',
+            'tmp/cache',
+            'tmp/cache/models',
+            'tmp/cache/persistent',
+            'tmp/cache/views',
+            'tmp/sessions',
+            'tmp/tests',
+            'webroot'
+        ];
+
+        foreach ($paths as $path) {
+            $path = $dir . '/' . $path;
+            if (!file_exists($path)) {
+                mkdir($path);
+                $io->write('Created `' . $path . '` directory');
+            }
         }
     }
 
@@ -126,10 +167,32 @@ class Installer
             }
         };
 
+        $subwalker = function ($dir, $perms, $io) use (&$subwalker, $changePerms) {
+            $files = array_diff(scandir($dir), ['.', '..']);
+            foreach ($files as $file) {
+                $path = $dir . '/' . $file;
+
+                if (!is_dir($path)) {
+                    $changePerms($path, $perms, $io);
+                    continue;
+                }
+
+                $changePerms($path, $perms, $io);
+                $subwalker($path, $perms, $io);
+            }
+        };
+
         $worldWritable = bindec('0000000111');
+        $walker($dir . '/assets', $worldWritable, $io);
         $walker($dir . '/tmp', $worldWritable, $io);
+        $walker($dir . '/webroot', $worldWritable, $io);
+        $subwalker($dir . '/assets', $worldWritable, $io);
+        $subwalker($dir . '/config', $worldWritable, $io);
+        $subwalker($dir . '/webroot', $worldWritable, $io);
+        $changePerms($dir . '/assets', $worldWritable, $io);
         $changePerms($dir . '/tmp', $worldWritable, $io);
         $changePerms($dir . '/logs', $worldWritable, $io);
+        $changePerms($dir . '/webroot', $worldWritable, $io);
     }
 
     /**
@@ -158,5 +221,65 @@ class Installer
             return;
         }
         $io->write('Unable to update Security.salt value.');
+    }
+
+    /**
+     * Checks for dependencies
+     *
+     * @param \Composer\Script\Event $event The composer event object.
+     * @throws \Exception Exception raised by validator.
+     * @return void
+     */
+    public static function preInstall(Event $event)
+    {
+        $io = $event->getIO();
+
+        $rootDir = dirname(dirname(__DIR__));
+
+        static::assertNpm($io);
+        static::assertBower($io);
+        static::assertGrunt($io);
+    }
+
+    /**
+     * Asserts that npm is installed
+     * @param \Composer\IO\IOInterface $io IO interface to write to console.
+     * @return void
+     */
+    public static function assertNpm($io)
+    {
+        exec('npm', $output, $errCode);
+        if ($errCode) {
+            throw new Exception('npm is required: https://github.com/npm/npm#super-easy-install');
+        }
+        $io->write('npm is installed');
+    }
+
+    /**
+     * Asserts that npm is installed
+     * @param \Composer\IO\IOInterface $io IO interface to write to console.
+     * @return void
+     */
+    public static function assertBower($io)
+    {
+        exec('bower --allow-root', $output, $errCode);
+        if ($errCode) {
+            throw new Exception('bower is required: http://bower.io/');
+        }
+        $io->write('bower is installed');
+    }
+
+    /**
+     * Asserts that npm is installed
+     * @param \Composer\IO\IOInterface $io IO interface to write to console.
+     * @return void
+     */
+    public static function assertGrunt($io)
+    {
+        exec('grunt', $output, $errCode);
+        if (!count($output)) {
+            throw new Exception('grunt-cli is required: http://gruntjs.com/getting-started');
+        }
+        $io->write('grunt-cli is installed');
     }
 }
