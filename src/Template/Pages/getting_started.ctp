@@ -125,16 +125,6 @@
             <li>Microsoft SQL Server (2008 or higher)</li>
             <li>SQLite 3</li>
         </ul>
-        <p>
-            The build system provided by GintonicCMS relies on the following
-            front-end tools. It is strongly suggested to install the 3 of them
-            globally to benefit from the full power of our build system.
-        </p>
-        <ul>
-            <li><a href="http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm">npm</a></li>
-            <li><a href="http://bower.io/">bower</a> (<code>npm install -g bower</code>)</li>
-            <li><a href="http://gruntjs.com/getting-started">grunt-cli</a> (<code>npm install -g grunt-cli</code>)</li>
-        </ul>
         <h3>Installing GintonicCMS</h3>
         <p>
             GintonicCMS relies on composer and you need to <strong>run it from a shell
@@ -355,29 +345,24 @@ bin/cake bake template posts --theme AdminTheme --prefix Admin
             front-end dependencies.
         </p>
         <p>
-            In order to do that, we use the folder named <code>assets/</code>. The
-            root of that folder contains build tools and dependencies. The source
-            code of your project should be kept in the folder <code>assets/src/</code>.
-            Within each type of assets, you will find a folder called <code>lib/</code>
-            that holds all of the dependencies for that specific type of files.
-            this structure will be replicated in the webroot folder with the build.
+            The build system relies on the following front-end tools. Here's 
+            how you can setup your workspace for front-end development.
+        </p>
+        <ol>
+            <li>install <a href="http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm">Node Package Manager</a></li>
+            <li><code>npm install -g bower</code> install bower globally (this might need sudo rights)</li>
+            <li><code>npm install -g grunt-cli</code> install bower globally (this might need sudo rights)</li>
+            <li><code>npm install</code> install build tools</li>
+            <li><code>bower install</code> downloads and unback front-end libraries</li>
+            <li><code>grunt</code></li>
+        </ol>
+        <p>
+            From this point, you can use the <code>assets/</code> folder to keep
+            a clean and unminified version of your files. when you're ready to
+            test / ship, run <code>grunt</code> to minify and optimize your files
+            into the webroot folder.
         </p>
         <h3>Building the assets</h3>
-        <p>
-            If you used the default installer, you can simply use the admin 
-            panel buttons in order to rebuild assets.
-        </p>
-        <p> Then you can run all steps of the build like this: </p>
-<pre class="prettyprint">
-# install node package dependencies
-npm install
-
-# download assets and front end dependencies
-bower install
-
-# optimizes, minifies and copy sources files in webroot
-grunt
-</pre>
         <h3>Extending Less files</h3>
         <p>
             Less files are built using the project's assets folder as the 
