@@ -40,3 +40,5 @@
 *.ttf binary 
 *.woff binary
 *.woff2 binary
+*.swf binary
+*.psd binary
